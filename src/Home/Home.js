@@ -6,7 +6,7 @@ import Posts from '../Posts/Posts'
 export default function Home() {
 
     return (
-        <div id="home">
+        <div id='home'>
             Home.js
             <SideBar />
             <Posts/>
