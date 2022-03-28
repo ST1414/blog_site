@@ -2,14 +2,12 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 
-    /* Fixes the nav to the top of the page */
-    /* position: fixed;  */
-    /* z-index: 999; */
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 1% 0; /* Top/bottom padding*/
-    background-color: gray; /* RGBA value. Red, Green, Blue & Opacity */
+    background-color: black; /* RGBA value. Red, Green, Blue & Opacity */
+    color: white;
     
 }
+

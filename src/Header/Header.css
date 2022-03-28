@@ -9,6 +9,24 @@
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 1% 0; /* Top/bottom padding*/
-    background-color: gray; /* RGBA value. Red, Green, Blue & Opacity */
+    padding: 1% 10px; /* Top/bottom padding */
+    background-color: black; /* RGBA value. Red, Green, Blue & Opacity */
+    color: white
+}
+.header-l {
+    flex: 1
+}
+.header-c {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-r {
+    flex: 1;    
+    display: flex;
+    justify-content: right;
+}
+#header a {
+    text-decoration: none;
+    color: white;
 }
