@@ -1,5 +1,7 @@
 import React from 'react';
-import NavBar from './NavBar/NavBar';
+import {Route} from 'react-router-dom'
+
+import NavBar from './Header/Header';
 import Footer from './Footer/Footer';
 import Home from './Home/Home';
 
@@ -9,10 +11,11 @@ function App() {
   // ----- Set state -----
 
   // ----- Initial Data Call -----
-  
+
   return (
     <div className="App">
       <NavBar/>
+      
       <Home />
       <Footer/>
     </div>
