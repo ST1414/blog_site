@@ -11,13 +11,12 @@ export default function Header() {
             </div>
             <div className='header-c'>
                 {/* <Link to='/'>Home</Link> */}
-                <Link to='/new-post'>New Entry</Link>
                 {/* <Link to='/'>Logout</Link> */}
                 {/* <Link to='/'>Search</Link> */}
             </div>
             <div className='header-r'>
-                {/* <Link to='/new-post'>New Post</Link> */}
                 <Link to='/'>Home</Link>
+                <Link to='/new-post'>New Post</Link>
                 {/* Image */}
             </div>
         </div>

@@ -1,4 +1,4 @@
-/* ===== CSS RESET ===== */
+/* ========== CSS RESET ========== */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -31,38 +31,24 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  background-color: #f2f5fa;  /*<<<<<<< ???? <<<<<<<*/
+  background-color: #f2f5fa; /* Added light gray background */
 }
-ol, ul {
-	/* list-style: none; */
-}
-/* blockquote, q {
-	quotes: none;
-} */
-/* blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-} */
-/* table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
 
-/* ===== UNIVERSAL SELECTOR ===== */
+
+/* ========== UNIVERSAL SELECTOR ========== */
 * {
   box-sizing: border-box;
   max-width: 100%; 
 }
 
-/* ===== UNIVERSAL SELECTOR ===== */
+/* ========== GENERAL STYLING ========== */
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem; /* 1.6rem = 16px */
   line-height: 1.5;
-  font-family: 'Roboto Mono', monospace; /* Google Font for 1.1 Mod 3 Project */
+  font-family: 'Roboto Mono', monospace; 
 }
 span {
   font-weight: bold;
@@ -75,3 +61,36 @@ h2{
   font-size: 2.4rem; /* 1.6rem = 16px */
   /* font-weight: bold; */
 }
+
+/* ========== HEADER ========== */
+#header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1% 10px; 
+  background-color: black; 
+  color: white
+}
+.header-l {
+  flex: 1
+}
+.header-c {
+  flex: 5;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-r {
+  flex: 1;    
+  display: flex;
+  justify-content: space-around;
+}
+#header a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ========== HEADER ========== */
+

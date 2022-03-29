@@ -3,28 +3,26 @@
     justify-content: space-between;
     align-items: center;
 
-    /* Fixes the nav to the top of the page */
-    /* position: fixed;  */
-    /* z-index: 999; */
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 1% 10px; /* Top/bottom padding */
-    background-color: black; /* RGBA value. Red, Green, Blue & Opacity */
+    padding: 1% 10px; 
+        /* Top/bottom padding */
+    background-color: black; 
     color: white
 }
 .header-l {
     flex: 1
 }
 .header-c {
-    flex: 2;
+    flex: 5;
     display: flex;
     justify-content: space-evenly;
 }
 .header-r {
     flex: 1;    
     display: flex;
-    justify-content: right;
+    justify-content: space-around;
 }
 #header a {
     text-decoration: none;

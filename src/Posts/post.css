@@ -2,6 +2,7 @@
     margin-bottom: 10px;
     margin-left: 10px;
     padding: 10px;
+    
     box-shadow: 5px 5px 5px gray;
     border-radius: 5px;
     background-color: white;
@@ -12,10 +13,19 @@
     justify-content: space-between;
     align-items: baseline;
 }
+.post-icons {
+    width: 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
 .post-date {
     font-style: italic;
 }
 a {
     text-decoration: none;
     color: black;
+}
+.delete-icon:hover {
+    cursor: pointer;
 }

@@ -15,15 +15,40 @@ function App() {
   // ----- Initialize State -----
     const [posts, setPosts] = useState([]) 
 
-  // ----- Handle Add New Post -----
-  const handleAdd = (newPost) => {
-    console.log('App.js - handleAdd')
-  }
-  // ----- Handle Edit Existing Post -----
-  const handleEdit = (updatedPost) => {
-    console.log('App.js - handleEdit')
+  // ----- Click Handlers -----
+  // * add new post
+  const handleAdd = (post) => {
+    const newPost = {
+      ...post,
+      id: Date.now(),
+      timestamp: Date.now(),
+    }
+    console.log(newPost)
+    setPosts([
+      newPost,
+      ...posts
+    ])
   }
 
+  // * edit existing post
+  const handleEdit = (updatedPost) => {
+    setPosts(
+      posts.map( post => {
+        if (post.id === updatedPost.id){
+          return updatedPost
+        } else {
+          return post
+        }
+      })
+    )
+
+  }
+
+  // * delete existing post
+  const handleDelete = (deleteId) => {
+    setPosts( posts.filter( post => post.id !== deleteId)
+    )
+  }
 
   // ----- Initial Data Call -----
   function fetchData() {
@@ -42,15 +67,22 @@ function App() {
   return (
     <div className='App'>
       <Header/>
+
       <Route exact path='/'>
-        <Home posts={posts} />
+        <Home 
+          posts={posts}
+          handleDelete={handleDelete}
+        />
       </Route>
+
       <Route path='/new-post'>
-        <NewPost handleSubmit={handleAdd}/>
+        <NewPost handleAdd={handleAdd}/>
       </Route>
+
       <Route path='/edit-post/:id'>
-        <EditPost posts={posts} handleSubmit={handleEdit}/>
+        <EditPost posts={posts} handleEdit={handleEdit}/>
       </Route>
+
       {/* <Footer/> */}
     </div>
   );

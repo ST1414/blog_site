@@ -1,7 +1,59 @@
 #edit-post {
-    /* width: 80%; */
-    margin: auto;
-    padding: 1% 10px; /* Top/bottom & left/right padding */
-    border: 1px solid red;
+    margin: 1%;
+    padding: 1%; 
 
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.edit-entry{
+    margin: 1%;
+    display: flex;
+    padding: 10px;
+}
+
+label {
+    width: 20%;
+}
+
+input, textarea {
+    flex: 1;
+    border-radius: 5px;
+    font-family:inherit;
+    font-size: inherit;
+    resize: vertical;
+    border: 1px solid green;
+}
+
+textarea {
+    height: 65vh;
+}
+
+.edit-entry-btn {
+    margin: 1%;
+    display: flex;
+    padding: 0px 10px;
+    justify-content: right;
+}
+
+.update-btn {
+    border: none;
+    border-radius: 5px;
+    margin: auto 10px;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    color: white;
+    background-color: green;
+    /* display: inline-block; */
+}
+.cancel-btn {
+    border: none;
+    border-radius: 5px;
+    margin: auto 10px;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    color: white;
+    background-color: gray;
+    /* display: inline-block; */
 }

@@ -1,68 +1,81 @@
-import React, {useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {useParams, useHistory} from 'react-router-dom';
 
 import './editPost.css'
 
-const initialFormValues = {
-    title: "",
-    timestamp: "",
-    text: ""
-}
+
+
 export default function EditPost(props) {
-    // ----- Initialize State -----
-    const [ form, setForm ] = useState(initialFormValues)
     
-    // ----- Pull post id, search posts, set form values -----
+    // ----- Props, State, and Params -----
+    const { handleEdit } = props;
+    const [ form, setForm ] = useState();
+    
     const { id } = useParams();
-    const post = props.posts.filter( post => post.id === parseInt(id))
+    const history = useHistory();
+    const post = props.posts.find( post => post.id === parseInt(id))
+    
+    // ----- Click Handlers -----
+    const handleChange = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
 
-    // ----- Handle On Change
+    // * Cancel new post and navigate home
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+    }
 
+    // * Update edit blog post to the database
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleEdit(form);
+        history.push("/");
+    }
+
+    useEffect( () => {
+        setForm(post);
+    }, [post])
+
+    // ----- If statement for when state is loading -----
+    if (form === undefined){
+        return <p>Loading...</p> 
+    } 
 
     return (
-        <>
-            <div className="post-title">
-                {post.title}
+        <form id='edit-post'>
+            <div className="edit-entry">
+                <h2>Edit Post: </h2>
+            </div>
+            <div className="edit-entry">
+                <label>Title: </label>
                 <input 
                     type="text" 
                     name="title"
                     value={form.title}
-                    onChange={ (e) => console.log(e.target.value)}
+                    onChange={handleChange}
+                    autoFocus={true}
                 />
             </div>
-            <div className="post-date">
-                {post.timestamp}
-                <input 
+            <div className="edit-entry">
+                <label>Blog Text: </label>
+                <textarea 
                     type="text" 
-                    name="title"
-                    value={form.timestamp}
-                    onChange={ (e) => console.log(e.target.value)}
-                />
-            </div>
-            <div className="post-text">
-                {post.text}
-                <input 
-                    type="text" 
-                    name="title"
+                    name="text"
                     value={form.text}
-                    onChange={ (e) => console.log(e.target.value)}
+                    onChange={handleChange}
                 />
             </div>
-        </>
+            <div className="edit-entry-btn">
+                <button className='cancel-btn' onClick={(e) => handleCancel(e)}>Cancel</button>
+                <button className='update-btn' onClick={(e) => handleSubmit(e)}>Update</button>
+            </div>
+        </form>
         
 
-
-        // <div id='edit-post'>
-        //     <h1>
-        //         Edit Post
-        //     </h1>
-            // <input 
-            //     type="text" 
-            //     name="title"
-            //     value={form.title}
-            //     onChange={ (e) => console.log(e.target.value)}
-            // />
-        // </div>
     )
 }
 

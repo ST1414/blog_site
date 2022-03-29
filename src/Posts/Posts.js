@@ -6,14 +6,14 @@ import './posts.css';
 
 export default function Posts(props) {
 
-    const { posts } = props;
+    const { posts, handleDelete } = props;
 
     return (
         <div id='posts'>
             {posts.length === 0 
-                ? <p>Loading...</p> 
+                ? null
                 : posts.map ( post => (
-                        <Post key={post.id} post={post} />
+                        <Post key={post.id} post={post} handleDelete={handleDelete} />
                 ))
             }
         </div>
