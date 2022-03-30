@@ -9,13 +9,14 @@ export default function Header() {
             <div className='header-l'>
                 My Blog Site
             </div>
-            <div className='header-c'>
+            {/* <div className='header-c'> */}
                 {/* <Link to='/'>Home</Link> */}
                 {/* <Link to='/'>Logout</Link> */}
                 {/* <Link to='/'>Search</Link> */}
-            </div>
+            {/* </div> */}
             <div className='header-r'>
                 <Link to='/'>Home</Link>
+                <p> | </p>
                 <Link to='/new-post'>New Post</Link>
                 {/* Image */}
             </div>

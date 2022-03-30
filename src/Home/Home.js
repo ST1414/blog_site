@@ -1,8 +1,9 @@
 // ----- Contains sidebar and blog posts
 import React from 'react';
+import {Route} from 'react-router-dom'
 import SideBar from '../sidebar/SideBar';
+import SideBar2 from '../sidebar/SideBar2';
 import Posts from '../posts/Posts';
-import NewPost from '../posts/NewPost';
 import Footer from '../footer/Footer';
 
 
@@ -15,13 +16,25 @@ export default function Home(props) {
     return (
         <>
             <div id='home'>
-                <SideBar />
-                <Posts 
+                <SideBar2
                     posts={posts}
-                    handleDelete={handleDelete}
                 />
+                <Route path="/:blogId">
+                    <Posts 
+                        posts={posts}
+                        handleDelete={handleDelete}
+                        // blogId={blogId}
+                    />
+                </Route>
+                <Route exact path="/">
+                    <Posts 
+                        posts={posts}
+                        handleDelete={handleDelete}
+                    />
+                </Route>
+
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

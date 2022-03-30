@@ -54,12 +54,16 @@ span {
   font-weight: bold;
 }
 h1 {
-  font-size: 3.2rem; /* 1.6rem = 16px */
+  font-size: 3.2rem; 
   /* font-weight: bold; */
 }
 h2{
-  font-size: 2.4rem; /* 1.6rem = 16px */
+  font-size: 2.4rem;
   /* font-weight: bold; */
+}
+h3{
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* ========== HEADER ========== */
@@ -70,27 +74,32 @@ h2{
   position: sticky;
   top: 0;
   width: 100%;
+  height: 40px;
   padding: 1% 10px; 
   background-color: black; 
   color: white
 }
 .header-l {
-  flex: 1
+  /* flex: 1; */
+
 }
-.header-c {
-  flex: 5;
+/* .header-c {
+
+} */
+.header-r {
+  /* flex: 1;     */
+  width:25%;
   display: flex;
   justify-content: space-evenly;
-}
-.header-r {
-  flex: 1;    
-  display: flex;
-  justify-content: space-around;
 }
 #header a {
   text-decoration: none;
   color: white;
 }
 
-/* ========== HEADER ========== */
-
+/* ========== HOME ========== */
+#home {
+  display:flex;
+  width: 100%;
+  padding: 1%; 
+}

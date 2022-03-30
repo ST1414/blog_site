@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Route} from 'react-router-dom'
+import {Route, Switch, useHistory} from 'react-router-dom'
 
 import Header from './header/Header';
 import Home from './home/Home';
@@ -12,8 +12,9 @@ import data from './data';
 
 function App() {
   
-  // ----- Initialize State -----
+    // ----- Props, State, and Params -----
     const [posts, setPosts] = useState([]) 
+    const history = useHistory();
 
   // ----- Click Handlers -----
   // * add new post
@@ -46,8 +47,8 @@ function App() {
 
   // * delete existing post
   const handleDelete = (deleteId) => {
-    setPosts( posts.filter( post => post.id !== deleteId)
-    )
+    setPosts( posts.filter( post => post.id !== deleteId) )
+    history.push('/');
   }
 
   // ----- Initial Data Call -----
@@ -68,21 +69,30 @@ function App() {
     <div className='App'>
       <Header/>
 
-      <Route exact path='/'>
-        <Home 
-          posts={posts}
-          handleDelete={handleDelete}
-        />
-      </Route>
+      <Switch>
+        
+        <Route path='/new-post'>
+          <NewPost handleAdd={handleAdd}/>
+        </Route>
 
-      <Route path='/new-post'>
-        <NewPost handleAdd={handleAdd}/>
-      </Route>
+        <Route path='/edit-post/:id'>
+          <EditPost posts={posts} handleEdit={handleEdit}/>
+        </Route>
 
-      <Route path='/edit-post/:id'>
-        <EditPost posts={posts} handleEdit={handleEdit}/>
-      </Route>
+        <Route exact path='/:blogId'>
+          <Home 
+            posts={posts}
+            handleDelete={handleDelete}
+          />
+        </Route>
 
+        <Route exact path='/'>
+          <Home 
+            posts={posts}
+            handleDelete={handleDelete}
+          />
+        </Route>
+      </Switch>
       {/* <Footer/> */}
     </div>
   );
