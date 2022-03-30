@@ -16,6 +16,7 @@
     
 - TO RUN:
     - run npm i
+    - NOTE: Did not change index.html to blog.html since this requires "npm run eject"
 
 
 # Create React App
