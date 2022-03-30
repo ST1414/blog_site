@@ -55,11 +55,9 @@ span {
 }
 h1 {
   font-size: 3.2rem; 
-  /* font-weight: bold; */
 }
 h2{
   font-size: 2.4rem;
-  /* font-weight: bold; */
 }
 h3{
   font-size: 2rem;
@@ -81,11 +79,7 @@ h3{
 }
 .header-l {
   /* flex: 1; */
-
 }
-/* .header-c {
-
-} */
 .header-r {
   /* flex: 1;     */
   width:25%;
@@ -97,9 +91,147 @@ h3{
   color: white;
 }
 
+/* ========== FOOTER ========== */
+#footer {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 1% 0;
+  background-color: black; 
+  color: white;
+}
+
+
 /* ========== HOME ========== */
 #home {
   display:flex;
   width: 100%;
   padding: 1%; 
+}
+
+/* ========== SIDEBAR ========== */
+#sidebar {
+  flex: 1; /* 1:3 ratio, SideBar to Posts  */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 5px;
+}
+#sidebar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#sidebar a {
+  text-decoration: none;
+  color: black;
+}
+/* --- For List of <Links> ----*/
+#sidebar h3 {
+  margin-top: 50px;
+  text-align:center;
+}
+#blog-entry-div {
+  /* width: 90%; */
+  height:200px;
+  padding: 0px 20px;
+  overflow:auto;
+}
+#blog-entry-div li {
+  padding: 2px 0px;
+  list-style-type: none;
+}
+li:hover{
+  font-weight: bold;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+/* ========== POSTS ========== */
+#posts {
+  flex: 3; /* 1:3 ratio, SideBar to Posts  */
+}
+
+/* ========== POST ========== */
+.post {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 5px;
+  background-color: white;
+}
+.post-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.post-icons {
+  width: 40px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.post-date {
+  font-style: italic;
+}
+.post a {
+  text-decoration: none;
+  color: black;
+}
+.delete-icon:hover {
+  cursor: pointer;
+}
+
+/* ========== NEW & EDIT POST ========== */
+.new-edit-post {    
+  margin: 1%;
+  padding: 1%; 
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 5px;
+  background-color: white;
+}
+.new-edit-entry{
+  margin: 1%;
+  display: flex;
+  padding: 10px;
+}
+label {
+  width: 20%;
+}
+input, textarea {
+  flex: 1;
+  border-radius: 5px;
+  resize: vertical;
+}
+textarea {
+  height: 65vh;
+}
+.new-edit-entry-btns {
+  margin: 1%;
+  display: flex;
+  padding: 0px 10px;
+  justify-content: right;
+}
+.btn {
+  border: none;
+  border-radius: 5px;
+  margin: auto 10px;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+}
+.submit-btn, .update-btn {
+  color: white;
+  background-color: green;
+}
+.cancel-btn {
+  color: white;
+  background-color: gray;
 }

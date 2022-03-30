@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import './newPost.css'
 
 export default function NewPost (props) {
 
@@ -30,11 +29,11 @@ export default function NewPost (props) {
     }
 
     return (
-        <form id='new-post'>
-            <div className="new-entry">
+        <form className='new-edit-post'>
+            <div className="new-edit-entry">
                 <h2>New Post: </h2>
             </div>
-            <div className="new-entry">
+            <div className="new-edit-entry">
                 <label>Title: </label>
                 <input 
                     type="text" 
@@ -44,7 +43,7 @@ export default function NewPost (props) {
                     autoFocus={true}
                 />
             </div>
-            <div className="new-entry">
+            <div className="new-edit-entry">
                 <label>Blog Text: </label>
                 <textarea 
                     type="text" 
@@ -53,15 +52,15 @@ export default function NewPost (props) {
                     onChange={handleChange}
                 />
             </div>
-            <div className="new-entry-btn">
+            <div className="new-edit-entry-btns">
                 <button 
-                    className='cancel-btn'
+                    className='btn cancel-btn'
                     onClick={(e) => handleCancel(e)}
                 >
                     Cancel
                 </button>
                 <button 
-                    className='submit-btn'
+                    className='btn submit-btn'
                     onClick={(e) => handleSubmit(e)}
                 >
                     Submit

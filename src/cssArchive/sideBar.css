@@ -1,4 +1,4 @@
-#sidebar {
+/* #sidebar {
     flex: 1;
     
     display: flex;
@@ -7,19 +7,36 @@
     padding: 20px;
     min-width: 300px;
     border-radius: 5px;
-    /* background-color: white; */
-
-    /* border: 1px solid green; */
 }
 img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-}
+} */
 
-/* ---------- For <select> DropDown ----------*/
-#blog-dropdown {
+/* ---------- For List of <Links> ----------*/
+/* #sidebar h3 {
+    margin-top: 50px;
+    text-align:center;
+}
+#blog-entry-div {
+    height:200px;
+    padding: 0px 20px;
+    overflow:auto;
+}
+#blog-entry-div li {
+    padding: 2px 0px;
+
+}
+li:hover{
+    font-weight: bold;
+    background-color: lightgray;
+    cursor: pointer;
+} */
+
+/* ---------- For <select> DropDown - OPTIONAL ----------*/
+/* #blog-dropdown {
     margin-top: 50px;
     width: 80%;
     text-align:center;
@@ -29,27 +46,4 @@ img {
 #blog-dropdown select {
     width: 80%;
     text-align-last:center;
-}
-
-/* ---------- For List of <Links> ----------*/
-#sidebar h3 {
-    margin-top: 50px;
-    text-align:center;
-}
-#blog-entry-div {
-    /* width: 90%; */
-    height:200px;
-    padding: 0px 20px;
-    overflow:auto;
-    /* border: 1px solid red */
-}
-#blog-entry-div li {
-    padding: 1px 0px;
-    /* list-style-type: circle; */
-
-}
-li:hover{
-    font-weight: bold;
-    background-color: lightgray;
-    cursor: pointer;
-}
+} */

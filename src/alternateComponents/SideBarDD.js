@@ -1,9 +1,11 @@
+// ####### DROP DOWN #######
+
 import React, { useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './sideBar.css'
 
-export default function SideBar(props) {
+export default function SideBarDD(props) {
 
     // ----- Props, State, and Params -----
     const { posts } = props;
@@ -30,9 +32,3 @@ export default function SideBar(props) {
         </div>
     )
 }
-
-
-
-// <form id="blog">
-
-// </form>

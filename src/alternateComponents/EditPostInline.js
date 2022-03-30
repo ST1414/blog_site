@@ -1,3 +1,5 @@
+// ####### EDIT POST INLINE #######
+
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 
@@ -55,20 +57,7 @@ export default function EditPost(props) {
                 />
             </div>
         </form>
-        
 
-
-        // <div id='edit-post'>
-        //     <h1>
-        //         Edit Post
-        //     </h1>
-            // <input 
-            //     type="text" 
-            //     name="title"
-            //     value={form.title}
-            //     onChange={ (e) => console.log(e.target.value)}
-            // />
-        // </div>
     )
 }
 
