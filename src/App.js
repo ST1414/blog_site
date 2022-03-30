@@ -28,13 +28,15 @@ function App() {
   // and the response would then be prefixed to the posts state
   // The response is used instead of the data sent, as the database
   // should handle the ID and TIMESTAMP
+
   const handleAdd = (post) => {
+    const today = new Date(Date.now());
+    const formattedDate = today.getMonth() < 9 ? "0"+today.toLocaleDateString() : today.toLocaleDateString()
     const newPost = {
       ...post,
       id: Date.now(),
-      timestamp: Date.now(),
+      timestamp: formattedDate
     }
-    console.log(newPost)
     setPosts([
       newPost,
       ...posts
