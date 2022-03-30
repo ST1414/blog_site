@@ -1,9 +1,9 @@
 # Salesforce Malana 3
- - Sean Terry
- - sean.m.terry@gmail.com
- - Browser: Chrome
- - Libraries: React & React Router
- - Files:
+- Sean Terry
+- sean.m.terry@gmail.com
+- Browser: Chrome
+- Libraries: React & React Router
+- Files:
     - index.js
     - App.js
         - Header.js: Title and nav links
@@ -13,6 +13,9 @@
                 - Post.js: Presentational component for each blog entry; contains edit and delete icons
         - NewPost.js: Component to create a new blog entry
         - EditPost.js: Component to edit an existing blog entry
+    
+- TO RUN:
+    - run npm i
 
 
 # Create React App
