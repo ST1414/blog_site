@@ -1,5 +1,6 @@
-Browser: Chrome
+# General 
 Libraries: React & React Router
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Files:
 - index.js
 - App.js
@@ -10,8 +11,3 @@ Files:
             - Post.js: Presentational component for each blog entry; contains edit and delete icons
     - NewPost.js: Component to create a new blog entry
     - EditPost.js: Component to edit an existing blog entry
-    
-# Create React App
-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-- `npm start`: Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
