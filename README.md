@@ -1,7 +1,8 @@
 # General 
-Libraries: React & React Router
-Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Files:
+- Libraries: React & React Router
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Files
 - index.js
 - App.js
     - Header.js: Title and nav links
