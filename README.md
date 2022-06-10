@@ -1,4 +1,3 @@
-# Salesforce Malana 3
 - Sean Terry
 - sean.m.terry@gmail.com
 - Browser: Chrome
